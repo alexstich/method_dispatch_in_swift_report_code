@@ -13,3 +13,4 @@ class B: A {
 
 let instance: A = B()
 instance.execute()
+
