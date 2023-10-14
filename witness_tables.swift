@@ -1,20 +1,16 @@
-import Foundation
-
-class Animal {
-    func makeNoise() { }
-    func jump() { }	
+protocol Noisable {
+    func makeNoise()
 }
 
-class Cat: Animal {
-    override func makeNoise() { print("meow") }
-    override func jump() { print("Cat jumped!") }
+struct Cat: Noisable {
+    func makeNoise() { print("meow") }
 }
 
-class Fox: Animal {
-    override func makeNoise() { print(".. what does the fox say?") }
+struct Dog: Noisable {
+    func makeNoise() { print("woof") }
 }
 
-let animals: [Animal] = [Cat(), Cat(), Fox(), Fox(), Cat()]
+let animals: [Noisable] = [Cat(), Cat(), Dog(), Dog(), Cat()]
 
-for animal in animals { animal.makeNoise() }
-animals[0].jump()
+for animal in animals { animal.makeNoise() } // polymorphism
+
