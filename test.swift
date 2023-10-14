@@ -1,18 +1,22 @@
-func main()
+
+class A 
 {
+    func A()
+    {
+    }
+
+    func B()
+    {
+    }
 }
 
-class A {
-	func B()
+class B: A 
 {
-}
-}
-
-class B: A {
-	override func B(){
-}
+    override func B()
+    {
+    }
 }
 
 
-let b = B()
+let b: B = B()
 b.B()
