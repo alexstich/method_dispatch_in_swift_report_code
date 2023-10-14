@@ -1,0 +1,1461 @@
+	.section	__TEXT,__text,regular,pure_instructions
+	.build_version macos, 14, 0	sdk_version 14, 0
+	.globl	_main
+	.p2align	4, 0x90
+_main:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r13
+	subq	$152, %rsp
+	.cfi_offset %r13, -24
+	leaq	-24(%rbp), %rdi
+	xorl	%esi, %esi
+	movl	$16, %edx
+	callq	_memset
+	leaq	-56(%rbp), %rdi
+	xorl	%esi, %esi
+	movl	$8, %edx
+	callq	_memset
+	xorl	%eax, %eax
+	movl	%eax, %edi
+	callq	_$s12which_method6AnimalCMa
+	movq	%rax, %rsi
+	movq	%rsi, -88(%rbp)
+	movl	$5, %edi
+	callq	_$ss27_allocateUninitializedArrayySayxG_BptBwlF
+	movq	%rax, -96(%rbp)
+	movq	%rdx, -104(%rbp)
+	xorl	%eax, %eax
+	movl	%eax, %edi
+	callq	_$s12which_method3CatCMa
+	movq	%rax, %r13
+	movq	%r13, -112(%rbp)
+	callq	_$s12which_method3CatCACycfC
+	movq	-112(%rbp), %r13
+	movq	-104(%rbp), %rdx
+	movq	%rax, (%rdx)
+	callq	_$s12which_method3CatCACycfC
+	movq	-104(%rbp), %rdx
+	movq	%rax, 8(%rdx)
+	xorl	%eax, %eax
+	movl	%eax, %edi
+	callq	_$s12which_method3FoxCMa
+	movq	%rax, %r13
+	movq	%r13, -120(%rbp)
+	callq	_$s12which_method3FoxCACycfC
+	movq	-120(%rbp), %r13
+	movq	-104(%rbp), %rdx
+	movq	%rax, 16(%rdx)
+	callq	_$s12which_method3FoxCACycfC
+	movq	-112(%rbp), %r13
+	movq	-104(%rbp), %rdx
+	movq	%rax, 24(%rdx)
+	callq	_$s12which_method3CatCACycfC
+	movq	-104(%rbp), %rdx
+	movq	-96(%rbp), %rdi
+	movq	-88(%rbp), %rsi
+	movq	%rax, 32(%rdx)
+	callq	_$ss27_finalizeUninitializedArrayySayxGABnlF
+	movq	%rax, _$s12which_method7animalsSayAA6AnimalCGvp(%rip)
+	movq	_$s12which_method7animalsSayAA6AnimalCGvp(%rip), %rdi
+	movq	%rdi, -80(%rbp)
+	callq	_swift_bridgeObjectRetain
+	movq	-80(%rbp), %rax
+	movq	%rax, -32(%rbp)
+	leaq	-24(%rbp), %rax
+	movq	%rax, -64(%rbp)
+	leaq	_$sSay12which_method6AnimalCGMD(%rip), %rdi
+	callq	___swift_instantiateConcreteTypeFromMangledName
+	movq	%rax, -72(%rbp)
+	callq	_$sSay12which_method6AnimalCGSayxGSlsWl
+	movq	-72(%rbp), %rdi
+	movq	%rax, %rsi
+	movq	-64(%rbp), %rax
+	leaq	-32(%rbp), %r13
+	callq	_$sSlss16IndexingIteratorVyxG0B0RtzrlE04makeB0ACyF
+LBB0_1:
+	leaq	-40(%rbp), %rax
+	movq	%rax, -136(%rbp)
+	leaq	_$ss16IndexingIteratorVySay12which_method6AnimalCGGMD(%rip), %rdi
+	callq	___swift_instantiateConcreteTypeFromMangledName
+	movq	%rax, %rdi
+	movq	-136(%rbp), %rax
+	leaq	-24(%rbp), %r13
+	callq	_$ss16IndexingIteratorV4next7ElementQzSgyF
+	movq	-40(%rbp), %rax
+	movq	%rax, -128(%rbp)
+	cmpq	$0, %rax
+	je	LBB0_3
+	movq	-128(%rbp), %rax
+	movq	%rax, -144(%rbp)
+	jmp	LBB0_4
+LBB0_3:
+	leaq	-24(%rbp), %rdi
+	callq	_$ss16IndexingIteratorVySay12which_method6AnimalCGGWOh
+	movq	-88(%rbp), %rdx
+	movq	_$s12which_method7animalsSayAA6AnimalCGvp(%rip), %rsi
+	leaq	-48(%rbp), %rax
+	xorl	%ecx, %ecx
+	movl	%ecx, %edi
+	callq	_$sSayxSicig
+	movq	-48(%rbp), %r13
+	movq	%r13, -152(%rbp)
+	movq	(%r13), %rax
+	callq	*88(%rax)
+	movq	-152(%rbp), %rdi
+	callq	_swift_release
+	xorl	%eax, %eax
+	addq	$152, %rsp
+	popq	%r13
+	popq	%rbp
+	retq
+LBB0_4:
+	movq	-144(%rbp), %r13
+	movq	%r13, -160(%rbp)
+	movq	%r13, -56(%rbp)
+	movq	(%r13), %rax
+	callq	*80(%rax)
+	movq	-160(%rbp), %rdi
+	callq	_swift_release
+	jmp	LBB0_1
+	.cfi_endproc
+
+	.private_extern	_$s12which_method6AnimalCMa
+	.globl	_$s12which_method6AnimalCMa
+	.p2align	4, 0x90
+_$s12which_method6AnimalCMa:
+	pushq	%rbp
+	movq	%rsp, %rbp
+	leaq	_$s12which_method6AnimalCMf+24(%rip), %rdi
+	callq	_objc_opt_self
+	xorl	%ecx, %ecx
+	movl	%ecx, %edx
+	popq	%rbp
+	retq
+
+	.private_extern	_$s12which_method3CatCMa
+	.globl	_$s12which_method3CatCMa
+	.p2align	4, 0x90
+_$s12which_method3CatCMa:
+	pushq	%rbp
+	movq	%rsp, %rbp
+	leaq	_$s12which_method3CatCMf+24(%rip), %rdi
+	callq	_objc_opt_self
+	xorl	%ecx, %ecx
+	movl	%ecx, %edx
+	popq	%rbp
+	retq
+
+	.private_extern	_$s12which_method6AnimalC9makeNoiseyyF
+	.globl	_$s12which_method6AnimalC9makeNoiseyyF
+	.p2align	4, 0x90
+_$s12which_method6AnimalC9makeNoiseyyF:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	$0, -8(%rbp)
+	movq	%r13, -8(%rbp)
+	popq	%rbp
+	retq
+	.cfi_endproc
+
+	.private_extern	_$s12which_method6AnimalC4jumpyyF
+	.globl	_$s12which_method6AnimalC4jumpyyF
+	.p2align	4, 0x90
+_$s12which_method6AnimalC4jumpyyF:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	$0, -8(%rbp)
+	movq	%r13, -8(%rbp)
+	popq	%rbp
+	retq
+	.cfi_endproc
+
+	.private_extern	_$s12which_method6AnimalCfd
+	.globl	_$s12which_method6AnimalCfd
+	.p2align	4, 0x90
+_$s12which_method6AnimalCfd:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%r13, %rax
+	movq	$0, -8(%rbp)
+	movq	%rax, -8(%rbp)
+	popq	%rbp
+	retq
+	.cfi_endproc
+
+	.private_extern	_$s12which_method6AnimalCfD
+	.globl	_$s12which_method6AnimalCfD
+	.p2align	4, 0x90
+_$s12which_method6AnimalCfD:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	movq	$0, -8(%rbp)
+	movq	%r13, -8(%rbp)
+	callq	_$s12which_method6AnimalCfd
+	movq	%rax, %rdi
+	movl	$16, %esi
+	movl	$7, %edx
+	callq	_swift_deallocClassInstance
+	addq	$16, %rsp
+	popq	%rbp
+	retq
+	.cfi_endproc
+
+	.private_extern	_$s12which_method6AnimalCACycfC
+	.globl	_$s12which_method6AnimalCACycfC
+	.p2align	4, 0x90
+_$s12which_method6AnimalCACycfC:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r13
+	pushq	%rax
+	.cfi_offset %r13, -24
+	movq	%r13, %rdi
+	movl	$16, %esi
+	movl	$7, %edx
+	callq	_swift_allocObject
+	movq	%rax, %r13
+	callq	_$s12which_method6AnimalCACycfc
+	addq	$8, %rsp
+	popq	%r13
+	popq	%rbp
+	retq
+	.cfi_endproc
+
+	.private_extern	_$s12which_method6AnimalCACycfc
+	.globl	_$s12which_method6AnimalCACycfc
+	.p2align	4, 0x90
+_$s12which_method6AnimalCACycfc:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	%r13, %rax
+	movq	$0, -8(%rbp)
+	movq	%rax, -8(%rbp)
+	popq	%rbp
+	retq
+	.cfi_endproc
+
+	.private_extern	_$s12which_method3CatC9makeNoiseyyF
+	.globl	_$s12which_method3CatC9makeNoiseyyF
+	.p2align	4, 0x90
+_$s12which_method3CatC9makeNoiseyyF:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	subq	$64, %rsp
+	movq	$0, -8(%rbp)
+	movq	%r13, -8(%rbp)
+	movq	_$sypN@GOTPCREL(%rip), %rsi
+	addq	$8, %rsi
+	movq	%rsi, -56(%rbp)
+	movl	$1, %edi
+	callq	_$ss27_allocateUninitializedArrayySayxG_BptBwlF
+	movq	%rax, -64(%rbp)
+	movq	%rdx, -48(%rbp)
+	leaq	L_.str.4.meow(%rip), %rdi
+	movl	$4, %esi
+	movl	$1, %edx
+	callq	_$sSS21_builtinStringLiteral17utf8CodeUnitCount7isASCIISSBp_BwBi1_tcfC
+	movq	-64(%rbp), %rdi
+	movq	-56(%rbp), %rsi
+	movq	%rax, %rcx
+	movq	%rdx, %rax
+	movq	-48(%rbp), %rdx
+	movq	_$sSSN@GOTPCREL(%rip), %r8
+	movq	%r8, 24(%rdx)
+	movq	%rcx, (%rdx)
+	movq	%rax, 8(%rdx)
+	callq	_$ss27_finalizeUninitializedArrayySayxGABnlF
+	movq	%rax, -16(%rbp)
+	callq	_$ss5print_9separator10terminatoryypd_S2StFfA0_
+	movq	%rax, -40(%rbp)
+	movq	%rdx, -24(%rbp)
+	callq	_$ss5print_9separator10terminatoryypd_S2StFfA1_
+	movq	-40(%rbp), %rsi
+	movq	-16(%rbp), %rdi
+	movq	%rax, %rcx
+	movq	%rdx, %r8
+	movq	-24(%rbp), %rdx
+	movq	%r8, -32(%rbp)
+	callq	_$ss5print_9separator10terminatoryypd_S2StF
+	movq	-32(%rbp), %rdi
+	callq	_swift_bridgeObjectRelease
+	movq	-24(%rbp), %rdi
+	callq	_swift_bridgeObjectRelease
+	movq	-16(%rbp), %rdi
+	callq	_swift_bridgeObjectRelease
+	addq	$64, %rsp
+	popq	%rbp
+	retq
+	.cfi_endproc
+
+	.private_extern	_$ss27_finalizeUninitializedArrayySayxGABnlF
+	.globl	_$ss27_finalizeUninitializedArrayySayxGABnlF
+	.weak_definition	_$ss27_finalizeUninitializedArrayySayxGABnlF
+	.p2align	4, 0x90
+_$ss27_finalizeUninitializedArrayySayxGABnlF:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r13
+	subq	$24, %rsp
+	.cfi_offset %r13, -24
+	movq	%rsi, -16(%rbp)
+	movq	%rdi, -24(%rbp)
+	xorl	%eax, %eax
+	movl	%eax, %edi
+	callq	_$sSaMa
+	movq	%rax, %rdi
+	leaq	-24(%rbp), %r13
+	callq	_$sSa12_endMutationyyF
+	movq	-24(%rbp), %rax
+	addq	$24, %rsp
+	popq	%r13
+	popq	%rbp
+	retq
+	.cfi_endproc
+
+	.private_extern	_$ss5print_9separator10terminatoryypd_S2StFfA0_
+	.globl	_$ss5print_9separator10terminatoryypd_S2StFfA0_
+	.weak_definition	_$ss5print_9separator10terminatoryypd_S2StFfA0_
+	.p2align	4, 0x90
+_$ss5print_9separator10terminatoryypd_S2StFfA0_:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	leaq	"L_.str.1. "(%rip), %rdi
+	movl	$1, %esi
+	movl	$1, %edx
+	callq	_$sSS21_builtinStringLiteral17utf8CodeUnitCount7isASCIISSBp_BwBi1_tcfC
+	popq	%rbp
+	retq
+	.cfi_endproc
+
+	.private_extern	_$ss5print_9separator10terminatoryypd_S2StFfA1_
+	.globl	_$ss5print_9separator10terminatoryypd_S2StFfA1_
+	.weak_definition	_$ss5print_9separator10terminatoryypd_S2StFfA1_
+	.p2align	4, 0x90
+_$ss5print_9separator10terminatoryypd_S2StFfA1_:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	leaq	"L_.str.1.\n"(%rip), %rdi
+	movl	$1, %esi
+	movl	$1, %edx
+	callq	_$sSS21_builtinStringLiteral17utf8CodeUnitCount7isASCIISSBp_BwBi1_tcfC
+	popq	%rbp
+	retq
+	.cfi_endproc
+
+	.private_extern	_$s12which_method3CatC4jumpyyF
+	.globl	_$s12which_method3CatC4jumpyyF
+	.p2align	4, 0x90
+_$s12which_method3CatC4jumpyyF:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	subq	$64, %rsp
+	movq	$0, -8(%rbp)
+	movq	%r13, -8(%rbp)
+	movq	_$sypN@GOTPCREL(%rip), %rsi
+	addq	$8, %rsi
+	movq	%rsi, -56(%rbp)
+	movl	$1, %edi
+	callq	_$ss27_allocateUninitializedArrayySayxG_BptBwlF
+	movq	%rax, -64(%rbp)
+	movq	%rdx, -48(%rbp)
+	leaq	"L_.str.11.Cat jumped!"(%rip), %rdi
+	movl	$11, %esi
+	movl	$1, %edx
+	callq	_$sSS21_builtinStringLiteral17utf8CodeUnitCount7isASCIISSBp_BwBi1_tcfC
+	movq	-64(%rbp), %rdi
+	movq	-56(%rbp), %rsi
+	movq	%rax, %rcx
+	movq	%rdx, %rax
+	movq	-48(%rbp), %rdx
+	movq	_$sSSN@GOTPCREL(%rip), %r8
+	movq	%r8, 24(%rdx)
+	movq	%rcx, (%rdx)
+	movq	%rax, 8(%rdx)
+	callq	_$ss27_finalizeUninitializedArrayySayxGABnlF
+	movq	%rax, -16(%rbp)
+	callq	_$ss5print_9separator10terminatoryypd_S2StFfA0_
+	movq	%rax, -40(%rbp)
+	movq	%rdx, -24(%rbp)
+	callq	_$ss5print_9separator10terminatoryypd_S2StFfA1_
+	movq	-40(%rbp), %rsi
+	movq	-16(%rbp), %rdi
+	movq	%rax, %rcx
+	movq	%rdx, %r8
+	movq	-24(%rbp), %rdx
+	movq	%r8, -32(%rbp)
+	callq	_$ss5print_9separator10terminatoryypd_S2StF
+	movq	-32(%rbp), %rdi
+	callq	_swift_bridgeObjectRelease
+	movq	-24(%rbp), %rdi
+	callq	_swift_bridgeObjectRelease
+	movq	-16(%rbp), %rdi
+	callq	_swift_bridgeObjectRelease
+	addq	$64, %rsp
+	popq	%rbp
+	retq
+	.cfi_endproc
+
+	.private_extern	_$s12which_method3CatCACycfC
+	.globl	_$s12which_method3CatCACycfC
+	.p2align	4, 0x90
+_$s12which_method3CatCACycfC:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r13
+	pushq	%rax
+	.cfi_offset %r13, -24
+	movq	%r13, %rdi
+	movl	$16, %esi
+	movl	$7, %edx
+	callq	_swift_allocObject
+	movq	%rax, %r13
+	callq	_$s12which_method3CatCACycfc
+	addq	$8, %rsp
+	popq	%r13
+	popq	%rbp
+	retq
+	.cfi_endproc
+
+	.private_extern	_$s12which_method3FoxCMa
+	.globl	_$s12which_method3FoxCMa
+	.p2align	4, 0x90
+_$s12which_method3FoxCMa:
+	pushq	%rbp
+	movq	%rsp, %rbp
+	leaq	_$s12which_method3FoxCMf+24(%rip), %rdi
+	callq	_objc_opt_self
+	xorl	%ecx, %ecx
+	movl	%ecx, %edx
+	popq	%rbp
+	retq
+
+	.private_extern	_$s12which_method3CatCACycfc
+	.globl	_$s12which_method3CatCACycfc
+	.p2align	4, 0x90
+_$s12which_method3CatCACycfc:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r13
+	subq	$24, %rsp
+	.cfi_offset %r13, -24
+	movq	$0, -16(%rbp)
+	movq	%r13, -16(%rbp)
+	movq	-16(%rbp), %r13
+	callq	_$s12which_method6AnimalCACycfc
+	movq	%rax, %rdi
+	movq	%rdi, -24(%rbp)
+	callq	_swift_retain
+	movq	-24(%rbp), %rax
+	movq	%rax, -16(%rbp)
+	movq	-16(%rbp), %rdi
+	callq	_swift_release
+	movq	-24(%rbp), %rax
+	addq	$24, %rsp
+	popq	%r13
+	popq	%rbp
+	retq
+	.cfi_endproc
+
+	.private_extern	_$s12which_method3CatCfd
+	.globl	_$s12which_method3CatCfd
+	.p2align	4, 0x90
+_$s12which_method3CatCfd:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	movq	$0, -8(%rbp)
+	movq	%r13, -8(%rbp)
+	callq	_$s12which_method6AnimalCfd
+	addq	$16, %rsp
+	popq	%rbp
+	retq
+	.cfi_endproc
+
+	.private_extern	_$s12which_method3CatCfD
+	.globl	_$s12which_method3CatCfD
+	.p2align	4, 0x90
+_$s12which_method3CatCfD:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	movq	$0, -8(%rbp)
+	movq	%r13, -8(%rbp)
+	callq	_$s12which_method3CatCfd
+	movq	%rax, %rdi
+	movl	$16, %esi
+	movl	$7, %edx
+	callq	_swift_deallocClassInstance
+	addq	$16, %rsp
+	popq	%rbp
+	retq
+	.cfi_endproc
+
+	.private_extern	_$s12which_method3FoxC9makeNoiseyyF
+	.globl	_$s12which_method3FoxC9makeNoiseyyF
+	.p2align	4, 0x90
+_$s12which_method3FoxC9makeNoiseyyF:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	subq	$64, %rsp
+	movq	$0, -8(%rbp)
+	movq	%r13, -8(%rbp)
+	movq	_$sypN@GOTPCREL(%rip), %rsi
+	addq	$8, %rsi
+	movq	%rsi, -56(%rbp)
+	movl	$1, %edi
+	callq	_$ss27_allocateUninitializedArrayySayxG_BptBwlF
+	movq	%rax, -64(%rbp)
+	movq	%rdx, -48(%rbp)
+	leaq	"L_.str.25... what does the fox say?"(%rip), %rdi
+	movl	$25, %esi
+	movl	$1, %edx
+	callq	_$sSS21_builtinStringLiteral17utf8CodeUnitCount7isASCIISSBp_BwBi1_tcfC
+	movq	-64(%rbp), %rdi
+	movq	-56(%rbp), %rsi
+	movq	%rax, %rcx
+	movq	%rdx, %rax
+	movq	-48(%rbp), %rdx
+	movq	_$sSSN@GOTPCREL(%rip), %r8
+	movq	%r8, 24(%rdx)
+	movq	%rcx, (%rdx)
+	movq	%rax, 8(%rdx)
+	callq	_$ss27_finalizeUninitializedArrayySayxGABnlF
+	movq	%rax, -16(%rbp)
+	callq	_$ss5print_9separator10terminatoryypd_S2StFfA0_
+	movq	%rax, -40(%rbp)
+	movq	%rdx, -24(%rbp)
+	callq	_$ss5print_9separator10terminatoryypd_S2StFfA1_
+	movq	-40(%rbp), %rsi
+	movq	-16(%rbp), %rdi
+	movq	%rax, %rcx
+	movq	%rdx, %r8
+	movq	-24(%rbp), %rdx
+	movq	%r8, -32(%rbp)
+	callq	_$ss5print_9separator10terminatoryypd_S2StF
+	movq	-32(%rbp), %rdi
+	callq	_swift_bridgeObjectRelease
+	movq	-24(%rbp), %rdi
+	callq	_swift_bridgeObjectRelease
+	movq	-16(%rbp), %rdi
+	callq	_swift_bridgeObjectRelease
+	addq	$64, %rsp
+	popq	%rbp
+	retq
+	.cfi_endproc
+
+	.private_extern	_$s12which_method3FoxCACycfC
+	.globl	_$s12which_method3FoxCACycfC
+	.p2align	4, 0x90
+_$s12which_method3FoxCACycfC:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r13
+	pushq	%rax
+	.cfi_offset %r13, -24
+	movq	%r13, %rdi
+	movl	$16, %esi
+	movl	$7, %edx
+	callq	_swift_allocObject
+	movq	%rax, %r13
+	callq	_$s12which_method3FoxCACycfc
+	addq	$8, %rsp
+	popq	%r13
+	popq	%rbp
+	retq
+	.cfi_endproc
+
+	.private_extern	___swift_instantiateConcreteTypeFromMangledName
+	.globl	___swift_instantiateConcreteTypeFromMangledName
+	.weak_definition	___swift_instantiateConcreteTypeFromMangledName
+	.p2align	4, 0x90
+___swift_instantiateConcreteTypeFromMangledName:
+	pushq	%rbp
+	movq	%rsp, %rbp
+	subq	$32, %rsp
+	movq	%rdi, -32(%rbp)
+	movq	%rdi, %rax
+	movq	%rax, -24(%rbp)
+	movq	(%rdi), %rax
+	movq	%rax, -16(%rbp)
+	cmpq	$0, %rax
+	setl	%cl
+	testb	$1, %cl
+	movq	%rax, -8(%rbp)
+	jne	LBB21_2
+LBB21_1:
+	movq	-8(%rbp), %rax
+	addq	$32, %rsp
+	popq	%rbp
+	retq
+LBB21_2:
+	movq	-32(%rbp), %rdi
+	movq	-16(%rbp), %rax
+	movq	%rax, %rsi
+	sarq	$32, %rsi
+	negq	%rsi
+	cltq
+	addq	%rax, %rdi
+	xorl	%eax, %eax
+	movl	%eax, %ecx
+	movq	%rcx, %rdx
+	callq	_swift_getTypeByMangledNameInContext2
+	movq	-24(%rbp), %rcx
+	movq	%rax, %rdx
+	movq	%rdx, %rax
+	movq	%rdx, (%rcx)
+	movq	%rax, -8(%rbp)
+	jmp	LBB21_1
+
+	.private_extern	_$sSay12which_method6AnimalCGSayxGSlsWl
+	.globl	_$sSay12which_method6AnimalCGSayxGSlsWl
+	.weak_definition	_$sSay12which_method6AnimalCGSayxGSlsWl
+	.p2align	4, 0x90
+_$sSay12which_method6AnimalCGSayxGSlsWl:
+	pushq	%rbp
+	movq	%rsp, %rbp
+	subq	$16, %rsp
+	movq	_$sSay12which_method6AnimalCGSayxGSlsWL(%rip), %rax
+	cmpq	$0, %rax
+	movq	%rax, -8(%rbp)
+	jne	LBB22_2
+	leaq	_$sSay12which_method6AnimalCGMD(%rip), %rdi
+	callq	___swift_instantiateConcreteTypeFromMangledNameAbstract
+	movq	%rax, %rsi
+	movq	_$sSayxGSlsMc@GOTPCREL(%rip), %rdi
+	callq	_swift_getWitnessTable
+	movq	%rax, %rcx
+	movq	%rcx, %rax
+	movq	%rcx, _$sSay12which_method6AnimalCGSayxGSlsWL(%rip)
+	movq	%rax, -8(%rbp)
+LBB22_2:
+	movq	-8(%rbp), %rax
+	addq	$16, %rsp
+	popq	%rbp
+	retq
+
+	.private_extern	___swift_instantiateConcreteTypeFromMangledNameAbstract
+	.globl	___swift_instantiateConcreteTypeFromMangledNameAbstract
+	.weak_definition	___swift_instantiateConcreteTypeFromMangledNameAbstract
+	.p2align	4, 0x90
+___swift_instantiateConcreteTypeFromMangledNameAbstract:
+	pushq	%rbp
+	movq	%rsp, %rbp
+	subq	$32, %rsp
+	movq	%rdi, -32(%rbp)
+	movq	%rdi, %rax
+	movq	%rax, -24(%rbp)
+	movq	(%rdi), %rax
+	movq	%rax, -16(%rbp)
+	cmpq	$0, %rax
+	setl	%cl
+	testb	$1, %cl
+	movq	%rax, -8(%rbp)
+	jne	LBB23_2
+LBB23_1:
+	movq	-8(%rbp), %rax
+	addq	$32, %rsp
+	popq	%rbp
+	retq
+LBB23_2:
+	movq	-32(%rbp), %rsi
+	movq	-16(%rbp), %rax
+	movq	%rax, %rdx
+	sarq	$32, %rdx
+	negq	%rdx
+	cltq
+	addq	%rax, %rsi
+	xorl	%eax, %eax
+	movl	%eax, %r8d
+	movl	$255, %edi
+	movq	%r8, %rcx
+	callq	_swift_getTypeByMangledNameInContextInMetadataState2
+	movq	-24(%rbp), %rcx
+	movq	%rax, %rdx
+	movq	%rdx, %rax
+	movq	%rdx, (%rcx)
+	movq	%rax, -8(%rbp)
+	jmp	LBB23_1
+
+	.private_extern	_$ss16IndexingIteratorVySay12which_method6AnimalCGGWOh
+	.globl	_$ss16IndexingIteratorVySay12which_method6AnimalCGGWOh
+	.weak_definition	_$ss16IndexingIteratorVySay12which_method6AnimalCGGWOh
+	.p2align	4, 0x90
+_$ss16IndexingIteratorVySay12which_method6AnimalCGGWOh:
+	pushq	%rbp
+	movq	%rsp, %rbp
+	subq	$16, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	(%rdi), %rdi
+	callq	_swift_bridgeObjectRelease
+	movq	-8(%rbp), %rax
+	addq	$16, %rsp
+	popq	%rbp
+	retq
+
+	.private_extern	_$s12which_method3FoxCACycfc
+	.globl	_$s12which_method3FoxCACycfc
+	.p2align	4, 0x90
+_$s12which_method3FoxCACycfc:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	pushq	%r13
+	subq	$24, %rsp
+	.cfi_offset %r13, -24
+	movq	$0, -16(%rbp)
+	movq	%r13, -16(%rbp)
+	movq	-16(%rbp), %r13
+	callq	_$s12which_method6AnimalCACycfc
+	movq	%rax, %rdi
+	movq	%rdi, -24(%rbp)
+	callq	_swift_retain
+	movq	-24(%rbp), %rax
+	movq	%rax, -16(%rbp)
+	movq	-16(%rbp), %rdi
+	callq	_swift_release
+	movq	-24(%rbp), %rax
+	addq	$24, %rsp
+	popq	%r13
+	popq	%rbp
+	retq
+	.cfi_endproc
+
+	.private_extern	_$s12which_method3FoxCfd
+	.globl	_$s12which_method3FoxCfd
+	.p2align	4, 0x90
+_$s12which_method3FoxCfd:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	movq	$0, -8(%rbp)
+	movq	%r13, -8(%rbp)
+	callq	_$s12which_method6AnimalCfd
+	addq	$16, %rsp
+	popq	%rbp
+	retq
+	.cfi_endproc
+
+	.private_extern	_$s12which_method3FoxCfD
+	.globl	_$s12which_method3FoxCfD
+	.p2align	4, 0x90
+_$s12which_method3FoxCfD:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	movq	$0, -8(%rbp)
+	movq	%r13, -8(%rbp)
+	callq	_$s12which_method3FoxCfd
+	movq	%rax, %rdi
+	movl	$16, %esi
+	movl	$7, %edx
+	callq	_swift_deallocClassInstance
+	addq	$16, %rsp
+	popq	%rbp
+	retq
+	.cfi_endproc
+
+	.private_extern	_$sSa12_endMutationyyF
+	.globl	_$sSa12_endMutationyyF
+	.weak_definition	_$sSa12_endMutationyyF
+	.p2align	4, 0x90
+_$sSa12_endMutationyyF:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	popq	%rbp
+	retq
+	.cfi_endproc
+
+	.private_extern	_$s12which_method7animalsSayAA6AnimalCGvp
+	.globl	_$s12which_method7animalsSayAA6AnimalCGvp
+.zerofill __DATA,__common,_$s12which_method7animalsSayAA6AnimalCGvp,8,3
+	.private_extern	"_symbolic Say_____G 12which_method6AnimalC"
+	.section	__TEXT,__swift5_typeref
+	.globl	"_symbolic Say_____G 12which_method6AnimalC"
+	.weak_definition	"_symbolic Say_____G 12which_method6AnimalC"
+	.p2align	1, 0x0
+"_symbolic Say_____G 12which_method6AnimalC":
+	.ascii	"Say"
+	.byte	1
+	.long	(_$s12which_method6AnimalCMn-"_symbolic Say_____G 12which_method6AnimalC")-4
+	.byte	71
+	.byte	0
+
+	.private_extern	_$sSay12which_method6AnimalCGMD
+	.section	__DATA,__data
+	.globl	_$sSay12which_method6AnimalCGMD
+	.weak_definition	_$sSay12which_method6AnimalCGMD
+	.p2align	3, 0x0
+_$sSay12which_method6AnimalCGMD:
+	.long	"_symbolic Say_____G 12which_method6AnimalC"-_$sSay12which_method6AnimalCGMD
+	.long	4294967287
+
+	.private_extern	_$sSay12which_method6AnimalCGSayxGSlsWL
+	.globl	_$sSay12which_method6AnimalCGSayxGSlsWL
+	.weak_definition	_$sSay12which_method6AnimalCGSayxGSlsWL
+	.p2align	3, 0x0
+_$sSay12which_method6AnimalCGSayxGSlsWL:
+	.quad	0
+
+	.private_extern	"_symbolic _____ySay_____GG s16IndexingIteratorV 12which_method6AnimalC"
+	.section	__TEXT,__swift5_typeref
+	.globl	"_symbolic _____ySay_____GG s16IndexingIteratorV 12which_method6AnimalC"
+	.weak_definition	"_symbolic _____ySay_____GG s16IndexingIteratorV 12which_method6AnimalC"
+	.p2align	1, 0x0
+"_symbolic _____ySay_____GG s16IndexingIteratorV 12which_method6AnimalC":
+	.byte	2
+	.long	_$ss16IndexingIteratorVMn@GOTPCREL+4
+	.ascii	"ySay"
+	.byte	1
+	.long	(_$s12which_method6AnimalCMn-"_symbolic _____ySay_____GG s16IndexingIteratorV 12which_method6AnimalC")-10
+	.space	2,71
+	.byte	0
+
+	.private_extern	_$ss16IndexingIteratorVySay12which_method6AnimalCGGMD
+	.section	__DATA,__data
+	.globl	_$ss16IndexingIteratorVySay12which_method6AnimalCGGMD
+	.weak_definition	_$ss16IndexingIteratorVySay12which_method6AnimalCGGMD
+	.p2align	3, 0x0
+_$ss16IndexingIteratorVySay12which_method6AnimalCGGMD:
+	.long	"_symbolic _____ySay_____GG s16IndexingIteratorV 12which_method6AnimalC"-_$ss16IndexingIteratorVySay12which_method6AnimalCGGMD
+	.long	4294967280
+
+	.section	__TEXT,__cstring,cstring_literals
+L_.str.4.meow:
+	.asciz	"meow"
+
+"L_.str.11.Cat jumped!":
+	.asciz	"Cat jumped!"
+
+	.p2align	4, 0x0
+"L_.str.25... what does the fox say?":
+	.asciz	".. what does the fox say?"
+
+	.section	__TEXT,__swift5_entry,regular,no_dead_strip
+	.p2align	2, 0x0
+l_entry_point:
+	.long	_main-l_entry_point
+	.long	0
+
+	.private_extern	_$s12which_method6AnimalCMm
+	.section	__DATA,__data
+	.globl	_$s12which_method6AnimalCMm
+	.p2align	3, 0x0
+_$s12which_method6AnimalCMm:
+	.quad	_OBJC_METACLASS_$__TtCs12_SwiftObject
+	.quad	_OBJC_METACLASS_$__TtCs12_SwiftObject
+	.quad	__objc_empty_cache
+	.quad	0
+	.quad	__METACLASS_DATA__TtC12which_method6Animal
+
+	.section	__TEXT,__cstring,cstring_literals
+	.p2align	4, 0x0
+L_.str.25._TtC12which_method6Animal:
+	.asciz	"_TtC12which_method6Animal"
+
+	.section	__DATA,__objc_const
+	.p2align	3, 0x0
+__METACLASS_DATA__TtC12which_method6Animal:
+	.long	129
+	.long	40
+	.long	40
+	.long	0
+	.quad	0
+	.quad	L_.str.25._TtC12which_method6Animal
+	.quad	0
+	.quad	0
+	.quad	0
+	.quad	0
+	.quad	0
+
+	.p2align	3, 0x0
+__DATA__TtC12which_method6Animal:
+	.long	128
+	.long	16
+	.long	16
+	.long	0
+	.quad	0
+	.quad	L_.str.25._TtC12which_method6Animal
+	.quad	0
+	.quad	0
+	.quad	0
+	.quad	0
+	.quad	0
+
+	.section	__TEXT,__const
+l_.str.12.which_method:
+	.asciz	"which_method"
+
+	.private_extern	_$s12which_methodMXM
+	.section	__TEXT,__constg_swiftt
+	.globl	_$s12which_methodMXM
+	.weak_definition	_$s12which_methodMXM
+	.p2align	2, 0x0
+_$s12which_methodMXM:
+	.long	0
+	.long	0
+	.long	(l_.str.12.which_method-_$s12which_methodMXM)-8
+
+	.section	__TEXT,__const
+l_.str.6.Animal:
+	.asciz	"Animal"
+
+	.private_extern	_$s12which_method6AnimalCMn
+	.section	__TEXT,__constg_swiftt
+	.globl	_$s12which_method6AnimalCMn
+	.p2align	2, 0x0
+_$s12which_method6AnimalCMn:
+	.long	2147483728
+	.long	(_$s12which_methodMXM-_$s12which_method6AnimalCMn)-4
+	.long	(l_.str.6.Animal-_$s12which_method6AnimalCMn)-8
+	.long	(_$s12which_method6AnimalCMa-_$s12which_method6AnimalCMn)-12
+	.long	(_$s12which_method6AnimalCMF-_$s12which_method6AnimalCMn)-16
+	.long	0
+	.long	3
+	.long	13
+	.long	3
+	.long	0
+	.long	10
+	.long	10
+	.long	3
+	.long	16
+	.long	(_$s12which_method6AnimalC9makeNoiseyyF-_$s12which_method6AnimalCMn)-56
+	.long	16
+	.long	(_$s12which_method6AnimalC4jumpyyF-_$s12which_method6AnimalCMn)-64
+	.long	1
+	.long	(_$s12which_method6AnimalCACycfC-_$s12which_method6AnimalCMn)-72
+
+	.section	__DATA,__data
+	.p2align	3, 0x0
+_$s12which_method6AnimalCMf:
+	.quad	0
+	.quad	_$s12which_method6AnimalCfD
+	.quad	_$sBoWV
+	.quad	_$s12which_method6AnimalCMm
+	.quad	_OBJC_CLASS_$__TtCs12_SwiftObject
+	.quad	__objc_empty_cache
+	.quad	0
+	.quad	__DATA__TtC12which_method6Animal+2
+	.long	2
+	.long	0
+	.long	16
+	.short	7
+	.short	0
+	.long	128
+	.long	24
+	.quad	_$s12which_method6AnimalCMn
+	.quad	0
+	.quad	_$s12which_method6AnimalC9makeNoiseyyF
+	.quad	_$s12which_method6AnimalC4jumpyyF
+	.quad	_$s12which_method6AnimalCACycfC
+
+	.private_extern	"_symbolic _____ 12which_method6AnimalC"
+	.section	__TEXT,__swift5_typeref
+	.globl	"_symbolic _____ 12which_method6AnimalC"
+	.weak_definition	"_symbolic _____ 12which_method6AnimalC"
+	.p2align	1, 0x0
+"_symbolic _____ 12which_method6AnimalC":
+	.byte	1
+	.long	(_$s12which_method6AnimalCMn-"_symbolic _____ 12which_method6AnimalC")-1
+	.byte	0
+
+	.section	__TEXT,__swift5_fieldmd
+	.p2align	2, 0x0
+_$s12which_method6AnimalCMF:
+	.long	"_symbolic _____ 12which_method6AnimalC"-_$s12which_method6AnimalCMF
+	.long	0
+	.short	1
+	.short	12
+	.long	0
+
+	.private_extern	_$s12which_method3CatCMm
+	.section	__DATA,__data
+	.globl	_$s12which_method3CatCMm
+	.p2align	3, 0x0
+_$s12which_method3CatCMm:
+	.quad	_OBJC_METACLASS_$__TtCs12_SwiftObject
+	.quad	_$s12which_method6AnimalCMm
+	.quad	__objc_empty_cache
+	.quad	0
+	.quad	__METACLASS_DATA__TtC12which_method3Cat
+
+	.section	__TEXT,__cstring,cstring_literals
+	.p2align	4, 0x0
+L_.str.22._TtC12which_method3Cat:
+	.asciz	"_TtC12which_method3Cat"
+
+	.section	__DATA,__objc_const
+	.p2align	3, 0x0
+__METACLASS_DATA__TtC12which_method3Cat:
+	.long	129
+	.long	40
+	.long	40
+	.long	0
+	.quad	0
+	.quad	L_.str.22._TtC12which_method3Cat
+	.quad	0
+	.quad	0
+	.quad	0
+	.quad	0
+	.quad	0
+
+	.p2align	3, 0x0
+__DATA__TtC12which_method3Cat:
+	.long	128
+	.long	16
+	.long	16
+	.long	0
+	.quad	0
+	.quad	L_.str.22._TtC12which_method3Cat
+	.quad	0
+	.quad	0
+	.quad	0
+	.quad	0
+	.quad	0
+
+	.section	__TEXT,__const
+l_.str.3.Cat:
+	.asciz	"Cat"
+
+	.private_extern	_$s12which_method3CatCMn
+	.section	__TEXT,__constg_swiftt
+	.globl	_$s12which_method3CatCMn
+	.p2align	2, 0x0
+_$s12which_method3CatCMn:
+	.long	1073741904
+	.long	(_$s12which_methodMXM-_$s12which_method3CatCMn)-4
+	.long	(l_.str.3.Cat-_$s12which_method3CatCMn)-8
+	.long	(_$s12which_method3CatCMa-_$s12which_method3CatCMn)-12
+	.long	(_$s12which_method3CatCMF-_$s12which_method3CatCMn)-16
+	.long	("_symbolic _____ 12which_method6AnimalC"-_$s12which_method3CatCMn)-20
+	.long	3
+	.long	13
+	.long	0
+	.long	0
+	.long	13
+	.long	3
+	.long	(_$s12which_method6AnimalCMn-_$s12which_method3CatCMn)-48
+	.long	_$s12which_method6AnimalCMn-_$s12which_method3CatCMn
+	.long	(_$s12which_method3CatC9makeNoiseyyF-_$s12which_method3CatCMn)-56
+	.long	(_$s12which_method6AnimalCMn-_$s12which_method3CatCMn)-60
+	.long	(_$s12which_method6AnimalCMn-_$s12which_method3CatCMn)-4
+	.long	(_$s12which_method3CatC4jumpyyF-_$s12which_method3CatCMn)-68
+	.long	(_$s12which_method6AnimalCMn-_$s12which_method3CatCMn)-72
+	.long	(_$s12which_method6AnimalCMn-_$s12which_method3CatCMn)-8
+	.long	(_$s12which_method3CatCACycfC-_$s12which_method3CatCMn)-80
+
+	.section	__DATA,__data
+	.p2align	3, 0x0
+_$s12which_method3CatCMf:
+	.quad	0
+	.quad	_$s12which_method3CatCfD
+	.quad	_$sBoWV
+	.quad	_$s12which_method3CatCMm
+	.quad	_$s12which_method6AnimalCMf+24
+	.quad	__objc_empty_cache
+	.quad	0
+	.quad	__DATA__TtC12which_method3Cat+2
+	.long	2
+	.long	0
+	.long	16
+	.short	7
+	.short	0
+	.long	128
+	.long	24
+	.quad	_$s12which_method3CatCMn
+	.quad	0
+	.quad	_$s12which_method3CatC9makeNoiseyyF
+	.quad	_$s12which_method3CatC4jumpyyF
+	.quad	_$s12which_method3CatCACycfC
+
+	.private_extern	"_symbolic _____ 12which_method3CatC"
+	.section	__TEXT,__swift5_typeref
+	.globl	"_symbolic _____ 12which_method3CatC"
+	.weak_definition	"_symbolic _____ 12which_method3CatC"
+	.p2align	1, 0x0
+"_symbolic _____ 12which_method3CatC":
+	.byte	1
+	.long	(_$s12which_method3CatCMn-"_symbolic _____ 12which_method3CatC")-1
+	.byte	0
+
+	.section	__TEXT,__swift5_fieldmd
+	.p2align	2, 0x0
+_$s12which_method3CatCMF:
+	.long	"_symbolic _____ 12which_method3CatC"-_$s12which_method3CatCMF
+	.long	("_symbolic _____ 12which_method6AnimalC"-_$s12which_method3CatCMF)-4
+	.short	1
+	.short	12
+	.long	0
+
+	.private_extern	_$s12which_method3FoxCMm
+	.section	__DATA,__data
+	.globl	_$s12which_method3FoxCMm
+	.p2align	3, 0x0
+_$s12which_method3FoxCMm:
+	.quad	_OBJC_METACLASS_$__TtCs12_SwiftObject
+	.quad	_$s12which_method6AnimalCMm
+	.quad	__objc_empty_cache
+	.quad	0
+	.quad	__METACLASS_DATA__TtC12which_method3Fox
+
+	.section	__TEXT,__cstring,cstring_literals
+	.p2align	4, 0x0
+L_.str.22._TtC12which_method3Fox:
+	.asciz	"_TtC12which_method3Fox"
+
+	.section	__DATA,__objc_const
+	.p2align	3, 0x0
+__METACLASS_DATA__TtC12which_method3Fox:
+	.long	129
+	.long	40
+	.long	40
+	.long	0
+	.quad	0
+	.quad	L_.str.22._TtC12which_method3Fox
+	.quad	0
+	.quad	0
+	.quad	0
+	.quad	0
+	.quad	0
+
+	.p2align	3, 0x0
+__DATA__TtC12which_method3Fox:
+	.long	128
+	.long	16
+	.long	16
+	.long	0
+	.quad	0
+	.quad	L_.str.22._TtC12which_method3Fox
+	.quad	0
+	.quad	0
+	.quad	0
+	.quad	0
+	.quad	0
+
+	.section	__TEXT,__const
+l_.str.3.Fox:
+	.asciz	"Fox"
+
+	.private_extern	_$s12which_method3FoxCMn
+	.section	__TEXT,__constg_swiftt
+	.globl	_$s12which_method3FoxCMn
+	.p2align	2, 0x0
+_$s12which_method3FoxCMn:
+	.long	1073741904
+	.long	(_$s12which_methodMXM-_$s12which_method3FoxCMn)-4
+	.long	(l_.str.3.Fox-_$s12which_method3FoxCMn)-8
+	.long	(_$s12which_method3FoxCMa-_$s12which_method3FoxCMn)-12
+	.long	(_$s12which_method3FoxCMF-_$s12which_method3FoxCMn)-16
+	.long	("_symbolic _____ 12which_method6AnimalC"-_$s12which_method3FoxCMn)-20
+	.long	3
+	.long	13
+	.long	0
+	.long	0
+	.long	13
+	.long	2
+	.long	(_$s12which_method6AnimalCMn-_$s12which_method3FoxCMn)-48
+	.long	_$s12which_method6AnimalCMn-_$s12which_method3FoxCMn
+	.long	(_$s12which_method3FoxC9makeNoiseyyF-_$s12which_method3FoxCMn)-56
+	.long	(_$s12which_method6AnimalCMn-_$s12which_method3FoxCMn)-60
+	.long	(_$s12which_method6AnimalCMn-_$s12which_method3FoxCMn)+4
+	.long	(_$s12which_method3FoxCACycfC-_$s12which_method3FoxCMn)-68
+
+	.section	__DATA,__data
+	.p2align	3, 0x0
+_$s12which_method3FoxCMf:
+	.quad	0
+	.quad	_$s12which_method3FoxCfD
+	.quad	_$sBoWV
+	.quad	_$s12which_method3FoxCMm
+	.quad	_$s12which_method6AnimalCMf+24
+	.quad	__objc_empty_cache
+	.quad	0
+	.quad	__DATA__TtC12which_method3Fox+2
+	.long	2
+	.long	0
+	.long	16
+	.short	7
+	.short	0
+	.long	128
+	.long	24
+	.quad	_$s12which_method3FoxCMn
+	.quad	0
+	.quad	_$s12which_method3FoxC9makeNoiseyyF
+	.quad	_$s12which_method6AnimalC4jumpyyF
+	.quad	_$s12which_method3FoxCACycfC
+
+	.private_extern	"_symbolic _____ 12which_method3FoxC"
+	.section	__TEXT,__swift5_typeref
+	.globl	"_symbolic _____ 12which_method3FoxC"
+	.weak_definition	"_symbolic _____ 12which_method3FoxC"
+	.p2align	1, 0x0
+"_symbolic _____ 12which_method3FoxC":
+	.byte	1
+	.long	(_$s12which_method3FoxCMn-"_symbolic _____ 12which_method3FoxC")-1
+	.byte	0
+
+	.section	__TEXT,__swift5_fieldmd
+	.p2align	2, 0x0
+_$s12which_method3FoxCMF:
+	.long	"_symbolic _____ 12which_method3FoxC"-_$s12which_method3FoxCMF
+	.long	("_symbolic _____ 12which_method6AnimalC"-_$s12which_method3FoxCMF)-4
+	.short	1
+	.short	12
+	.long	0
+
+	.private_extern	__swift_FORCE_LOAD_$_swiftFoundation_$_which_method
+	.section	__DATA,__const
+	.globl	__swift_FORCE_LOAD_$_swiftFoundation_$_which_method
+	.weak_definition	__swift_FORCE_LOAD_$_swiftFoundation_$_which_method
+	.p2align	3, 0x0
+__swift_FORCE_LOAD_$_swiftFoundation_$_which_method:
+	.quad	__swift_FORCE_LOAD_$_swiftFoundation
+
+	.private_extern	__swift_FORCE_LOAD_$_swiftObjectiveC_$_which_method
+	.globl	__swift_FORCE_LOAD_$_swiftObjectiveC_$_which_method
+	.weak_definition	__swift_FORCE_LOAD_$_swiftObjectiveC_$_which_method
+	.p2align	3, 0x0
+__swift_FORCE_LOAD_$_swiftObjectiveC_$_which_method:
+	.quad	__swift_FORCE_LOAD_$_swiftObjectiveC
+
+	.private_extern	__swift_FORCE_LOAD_$_swiftDarwin_$_which_method
+	.globl	__swift_FORCE_LOAD_$_swiftDarwin_$_which_method
+	.weak_definition	__swift_FORCE_LOAD_$_swiftDarwin_$_which_method
+	.p2align	3, 0x0
+__swift_FORCE_LOAD_$_swiftDarwin_$_which_method:
+	.quad	__swift_FORCE_LOAD_$_swiftDarwin
+
+	.private_extern	__swift_FORCE_LOAD_$_swiftCoreFoundation_$_which_method
+	.globl	__swift_FORCE_LOAD_$_swiftCoreFoundation_$_which_method
+	.weak_definition	__swift_FORCE_LOAD_$_swiftCoreFoundation_$_which_method
+	.p2align	3, 0x0
+__swift_FORCE_LOAD_$_swiftCoreFoundation_$_which_method:
+	.quad	__swift_FORCE_LOAD_$_swiftCoreFoundation
+
+	.private_extern	__swift_FORCE_LOAD_$_swiftDispatch_$_which_method
+	.globl	__swift_FORCE_LOAD_$_swiftDispatch_$_which_method
+	.weak_definition	__swift_FORCE_LOAD_$_swiftDispatch_$_which_method
+	.p2align	3, 0x0
+__swift_FORCE_LOAD_$_swiftDispatch_$_which_method:
+	.quad	__swift_FORCE_LOAD_$_swiftDispatch
+
+	.private_extern	__swift_FORCE_LOAD_$_swiftXPC_$_which_method
+	.globl	__swift_FORCE_LOAD_$_swiftXPC_$_which_method
+	.weak_definition	__swift_FORCE_LOAD_$_swiftXPC_$_which_method
+	.p2align	3, 0x0
+__swift_FORCE_LOAD_$_swiftXPC_$_which_method:
+	.quad	__swift_FORCE_LOAD_$_swiftXPC
+
+	.private_extern	__swift_FORCE_LOAD_$_swiftIOKit_$_which_method
+	.globl	__swift_FORCE_LOAD_$_swiftIOKit_$_which_method
+	.weak_definition	__swift_FORCE_LOAD_$_swiftIOKit_$_which_method
+	.p2align	3, 0x0
+__swift_FORCE_LOAD_$_swiftIOKit_$_which_method:
+	.quad	__swift_FORCE_LOAD_$_swiftIOKit
+
+	.section	__TEXT,__cstring,cstring_literals
+"L_.str.1.\n":
+	.asciz	"\n"
+
+"L_.str.1. ":
+	.asciz	" "
+
+	.section	__TEXT,__swift5_types
+	.p2align	2, 0x0
+l_$s12which_method6AnimalCHn:
+	.long	_$s12which_method6AnimalCMn-l_$s12which_method6AnimalCHn
+
+	.p2align	2, 0x0
+l_$s12which_method3CatCHn:
+	.long	_$s12which_method3CatCMn-l_$s12which_method3CatCHn
+
+	.p2align	2, 0x0
+l_$s12which_method3FoxCHn:
+	.long	_$s12which_method3FoxCMn-l_$s12which_method3FoxCHn
+
+	.private_extern	___swift_reflection_version
+	.section	__TEXT,__const
+	.globl	___swift_reflection_version
+	.weak_definition	___swift_reflection_version
+	.p2align	1, 0x0
+___swift_reflection_version:
+	.short	3
+
+	.section	__DATA,__objc_classlist,regular,no_dead_strip
+	.p2align	3, 0x0
+_objc_classes_$s12which_method6AnimalCN:
+	.quad	_$s12which_method6AnimalCN
+
+	.p2align	3, 0x0
+_objc_classes_$s12which_method3CatCN:
+	.quad	_$s12which_method3CatCN
+
+	.p2align	3, 0x0
+_objc_classes_$s12which_method3FoxCN:
+	.quad	_$s12which_method3FoxCN
+
+	.no_dead_strip	_main
+	.no_dead_strip	l_entry_point
+	.no_dead_strip	_$s12which_method6AnimalCMF
+	.no_dead_strip	_$s12which_method3CatCMF
+	.no_dead_strip	_$s12which_method3FoxCMF
+	.no_dead_strip	__swift_FORCE_LOAD_$_swiftFoundation_$_which_method
+	.no_dead_strip	__swift_FORCE_LOAD_$_swiftObjectiveC_$_which_method
+	.no_dead_strip	__swift_FORCE_LOAD_$_swiftDarwin_$_which_method
+	.no_dead_strip	__swift_FORCE_LOAD_$_swiftCoreFoundation_$_which_method
+	.no_dead_strip	__swift_FORCE_LOAD_$_swiftDispatch_$_which_method
+	.no_dead_strip	__swift_FORCE_LOAD_$_swiftXPC_$_which_method
+	.no_dead_strip	__swift_FORCE_LOAD_$_swiftIOKit_$_which_method
+	.no_dead_strip	l_$s12which_method6AnimalCHn
+	.no_dead_strip	l_$s12which_method3CatCHn
+	.no_dead_strip	l_$s12which_method3FoxCHn
+	.no_dead_strip	___swift_reflection_version
+	.no_dead_strip	_objc_classes_$s12which_method6AnimalCN
+	.no_dead_strip	_objc_classes_$s12which_method3CatCN
+	.no_dead_strip	_objc_classes_$s12which_method3FoxCN
+	.linker_option "-lswiftFoundation"
+	.linker_option "-framework", "Foundation"
+	.linker_option "-lswiftCore"
+	.linker_option "-lswift_StringProcessing"
+	.linker_option "-lswift_Concurrency"
+	.linker_option "-lswiftObservation"
+	.linker_option "-lswiftObjectiveC"
+	.linker_option "-lswiftDarwin"
+	.linker_option "-lswiftCoreFoundation"
+	.linker_option "-framework", "CoreFoundation"
+	.linker_option "-lswiftDispatch"
+	.linker_option "-framework", "Combine"
+	.linker_option "-framework", "CoreServices"
+	.linker_option "-framework", "Security"
+	.linker_option "-lswiftXPC"
+	.linker_option "-framework", "CFNetwork"
+	.linker_option "-framework", "DiskArbitration"
+	.linker_option "-lswiftIOKit"
+	.linker_option "-framework", "IOKit"
+	.linker_option "-lswiftSwiftOnoneSupport"
+	.linker_option "-lobjc"
+	.section	__DATA,__objc_imageinfo,regular,no_dead_strip
+L_OBJC_IMAGE_INFO:
+	.long	0
+	.long	84477760
+
+	.weak_reference __swift_FORCE_LOAD_$_swiftFoundation
+	.weak_reference __swift_FORCE_LOAD_$_swiftObjectiveC
+	.weak_reference __swift_FORCE_LOAD_$_swiftDarwin
+	.weak_reference __swift_FORCE_LOAD_$_swiftCoreFoundation
+	.weak_reference __swift_FORCE_LOAD_$_swiftDispatch
+	.weak_reference __swift_FORCE_LOAD_$_swiftXPC
+	.weak_reference __swift_FORCE_LOAD_$_swiftIOKit
+	.globl	_$s12which_method6AnimalC9makeNoiseyyFTq
+	.private_extern	_$s12which_method6AnimalC9makeNoiseyyFTq
+	.alt_entry	_$s12which_method6AnimalC9makeNoiseyyFTq
+.set _$s12which_method6AnimalC9makeNoiseyyFTq, _$s12which_method6AnimalCMn+52
+	.globl	_$s12which_method6AnimalC4jumpyyFTq
+	.private_extern	_$s12which_method6AnimalC4jumpyyFTq
+	.alt_entry	_$s12which_method6AnimalC4jumpyyFTq
+.set _$s12which_method6AnimalC4jumpyyFTq, _$s12which_method6AnimalCMn+60
+	.globl	_$s12which_method6AnimalCACycfCTq
+	.private_extern	_$s12which_method6AnimalCACycfCTq
+	.alt_entry	_$s12which_method6AnimalCACycfCTq
+.set _$s12which_method6AnimalCACycfCTq, _$s12which_method6AnimalCMn+68
+	.globl	_$s12which_method6AnimalCN
+	.private_extern	_$s12which_method6AnimalCN
+	.alt_entry	_$s12which_method6AnimalCN
+.set _$s12which_method6AnimalCN, _$s12which_method6AnimalCMf+24
+	.globl	_$s12which_method3CatCN
+	.private_extern	_$s12which_method3CatCN
+	.alt_entry	_$s12which_method3CatCN
+.set _$s12which_method3CatCN, _$s12which_method3CatCMf+24
+	.globl	_$s12which_method3FoxCN
+	.private_extern	_$s12which_method3FoxCN
+	.alt_entry	_$s12which_method3FoxCN
+.set _$s12which_method3FoxCN, _$s12which_method3FoxCMf+24
+.subsections_via_symbols

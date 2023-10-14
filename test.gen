@@ -14,13 +14,13 @@ _main:
 	.cfi_offset %r13, -24
 	xorl	%eax, %eax
 	movl	%eax, %edi
-	callq	_$s4main1BCMa
+	callq	_$s4test1BCMa
 	movq	%rax, %r13
-	callq	_$s4main1BCACycfC
-	movq	%rax, _$s4main1bAA1BCvp(%rip)
-	movq	_$s4main1bAA1BCvp(%rip), %r13
+	callq	_$s4test1BCACycfC
+	movq	%rax, _$s4test1bAA1BCvp(%rip)
+	movq	_$s4test1bAA1BCvp(%rip), %r13
 	movq	(%r13), %rax
-	callq	*80(%rax)
+	callq	*88(%rax)
 	xorl	%eax, %eax
 	addq	$8, %rsp
 	popq	%r13
@@ -28,37 +28,23 @@ _main:
 	retq
 	.cfi_endproc
 
-	.private_extern	_$s4main1BCMa
-	.globl	_$s4main1BCMa
+	.private_extern	_$s4test1BCMa
+	.globl	_$s4test1BCMa
 	.p2align	4, 0x90
-_$s4main1BCMa:
+_$s4test1BCMa:
 	pushq	%rbp
 	movq	%rsp, %rbp
-	leaq	_$s4main1BCMf+24(%rip), %rdi
+	leaq	_$s4test1BCMf+24(%rip), %rdi
 	callq	_objc_opt_self
 	xorl	%ecx, %ecx
 	movl	%ecx, %edx
 	popq	%rbp
 	retq
 
-	.private_extern	_$s4mainAAyyF
-	.globl	_$s4mainAAyyF
+	.private_extern	_$s4test1ACAByyF
+	.globl	_$s4test1ACAByyF
 	.p2align	4, 0x90
-_$s4mainAAyyF:
-	.cfi_startproc
-	pushq	%rbp
-	.cfi_def_cfa_offset 16
-	.cfi_offset %rbp, -16
-	movq	%rsp, %rbp
-	.cfi_def_cfa_register %rbp
-	popq	%rbp
-	retq
-	.cfi_endproc
-
-	.private_extern	_$s4main1AC1ByyF
-	.globl	_$s4main1AC1ByyF
-	.p2align	4, 0x90
-_$s4main1AC1ByyF:
+_$s4test1ACAByyF:
 	.cfi_startproc
 	pushq	%rbp
 	.cfi_def_cfa_offset 16
@@ -71,10 +57,26 @@ _$s4main1AC1ByyF:
 	retq
 	.cfi_endproc
 
-	.private_extern	_$s4main1ACfd
-	.globl	_$s4main1ACfd
+	.private_extern	_$s4test1AC1ByyF
+	.globl	_$s4test1AC1ByyF
 	.p2align	4, 0x90
-_$s4main1ACfd:
+_$s4test1AC1ByyF:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movq	$0, -8(%rbp)
+	movq	%r13, -8(%rbp)
+	popq	%rbp
+	retq
+	.cfi_endproc
+
+	.private_extern	_$s4test1ACfd
+	.globl	_$s4test1ACfd
+	.p2align	4, 0x90
+_$s4test1ACfd:
 	.cfi_startproc
 	pushq	%rbp
 	.cfi_def_cfa_offset 16
@@ -88,10 +90,10 @@ _$s4main1ACfd:
 	retq
 	.cfi_endproc
 
-	.private_extern	_$s4main1ACfD
-	.globl	_$s4main1ACfD
+	.private_extern	_$s4test1ACfD
+	.globl	_$s4test1ACfD
 	.p2align	4, 0x90
-_$s4main1ACfD:
+_$s4test1ACfD:
 	.cfi_startproc
 	pushq	%rbp
 	.cfi_def_cfa_offset 16
@@ -101,7 +103,7 @@ _$s4main1ACfD:
 	subq	$16, %rsp
 	movq	$0, -8(%rbp)
 	movq	%r13, -8(%rbp)
-	callq	_$s4main1ACfd
+	callq	_$s4test1ACfd
 	movq	%rax, %rdi
 	movl	$16, %esi
 	movl	$7, %edx
@@ -111,10 +113,10 @@ _$s4main1ACfD:
 	retq
 	.cfi_endproc
 
-	.private_extern	_$s4main1ACACycfC
-	.globl	_$s4main1ACACycfC
+	.private_extern	_$s4test1ACACycfC
+	.globl	_$s4test1ACACycfC
 	.p2align	4, 0x90
-_$s4main1ACACycfC:
+_$s4test1ACACycfC:
 	.cfi_startproc
 	pushq	%rbp
 	.cfi_def_cfa_offset 16
@@ -129,17 +131,17 @@ _$s4main1ACACycfC:
 	movl	$7, %edx
 	callq	_swift_allocObject
 	movq	%rax, %r13
-	callq	_$s4main1ACACycfc
+	callq	_$s4test1ACACycfc
 	addq	$8, %rsp
 	popq	%r13
 	popq	%rbp
 	retq
 	.cfi_endproc
 
-	.private_extern	_$s4main1ACACycfc
-	.globl	_$s4main1ACACycfc
+	.private_extern	_$s4test1ACACycfc
+	.globl	_$s4test1ACACycfc
 	.p2align	4, 0x90
-_$s4main1ACACycfc:
+_$s4test1ACACycfc:
 	.cfi_startproc
 	pushq	%rbp
 	.cfi_def_cfa_offset 16
@@ -153,10 +155,10 @@ _$s4main1ACACycfc:
 	retq
 	.cfi_endproc
 
-	.private_extern	_$s4main1BCAByyF
-	.globl	_$s4main1BCAByyF
+	.private_extern	_$s4test1BCAByyF
+	.globl	_$s4test1BCAByyF
 	.p2align	4, 0x90
-_$s4main1BCAByyF:
+_$s4test1BCAByyF:
 	.cfi_startproc
 	pushq	%rbp
 	.cfi_def_cfa_offset 16
@@ -169,10 +171,10 @@ _$s4main1BCAByyF:
 	retq
 	.cfi_endproc
 
-	.private_extern	_$s4main1BCACycfC
-	.globl	_$s4main1BCACycfC
+	.private_extern	_$s4test1BCACycfC
+	.globl	_$s4test1BCACycfC
 	.p2align	4, 0x90
-_$s4main1BCACycfC:
+_$s4test1BCACycfC:
 	.cfi_startproc
 	pushq	%rbp
 	.cfi_def_cfa_offset 16
@@ -187,17 +189,17 @@ _$s4main1BCACycfC:
 	movl	$7, %edx
 	callq	_swift_allocObject
 	movq	%rax, %r13
-	callq	_$s4main1BCACycfc
+	callq	_$s4test1BCACycfc
 	addq	$8, %rsp
 	popq	%r13
 	popq	%rbp
 	retq
 	.cfi_endproc
 
-	.private_extern	_$s4main1BCACycfc
-	.globl	_$s4main1BCACycfc
+	.private_extern	_$s4test1BCACycfc
+	.globl	_$s4test1BCACycfc
 	.p2align	4, 0x90
-_$s4main1BCACycfc:
+_$s4test1BCACycfc:
 	.cfi_startproc
 	pushq	%rbp
 	.cfi_def_cfa_offset 16
@@ -210,7 +212,7 @@ _$s4main1BCACycfc:
 	movq	$0, -16(%rbp)
 	movq	%r13, -16(%rbp)
 	movq	-16(%rbp), %r13
-	callq	_$s4main1ACACycfc
+	callq	_$s4test1ACACycfc
 	movq	%rax, %rdi
 	movq	%rdi, -24(%rbp)
 	callq	_swift_retain
@@ -225,10 +227,10 @@ _$s4main1BCACycfc:
 	retq
 	.cfi_endproc
 
-	.private_extern	_$s4main1BCfd
-	.globl	_$s4main1BCfd
+	.private_extern	_$s4test1BCfd
+	.globl	_$s4test1BCfd
 	.p2align	4, 0x90
-_$s4main1BCfd:
+_$s4test1BCfd:
 	.cfi_startproc
 	pushq	%rbp
 	.cfi_def_cfa_offset 16
@@ -238,16 +240,16 @@ _$s4main1BCfd:
 	subq	$16, %rsp
 	movq	$0, -8(%rbp)
 	movq	%r13, -8(%rbp)
-	callq	_$s4main1ACfd
+	callq	_$s4test1ACfd
 	addq	$16, %rsp
 	popq	%rbp
 	retq
 	.cfi_endproc
 
-	.private_extern	_$s4main1BCfD
-	.globl	_$s4main1BCfD
+	.private_extern	_$s4test1BCfD
+	.globl	_$s4test1BCfD
 	.p2align	4, 0x90
-_$s4main1BCfD:
+_$s4test1BCfD:
 	.cfi_startproc
 	pushq	%rbp
 	.cfi_def_cfa_offset 16
@@ -257,7 +259,7 @@ _$s4main1BCfD:
 	subq	$16, %rsp
 	movq	$0, -8(%rbp)
 	movq	%r13, -8(%rbp)
-	callq	_$s4main1BCfd
+	callq	_$s4test1BCfd
 	movq	%rax, %rdi
 	movl	$16, %esi
 	movl	$7, %edx
@@ -267,52 +269,52 @@ _$s4main1BCfD:
 	retq
 	.cfi_endproc
 
-	.private_extern	_$s4main1ACMa
-	.globl	_$s4main1ACMa
+	.private_extern	_$s4test1ACMa
+	.globl	_$s4test1ACMa
 	.p2align	4, 0x90
-_$s4main1ACMa:
+_$s4test1ACMa:
 	pushq	%rbp
 	movq	%rsp, %rbp
-	leaq	_$s4main1ACMf+24(%rip), %rdi
+	leaq	_$s4test1ACMf+24(%rip), %rdi
 	callq	_objc_opt_self
 	xorl	%ecx, %ecx
 	movl	%ecx, %edx
 	popq	%rbp
 	retq
 
-	.private_extern	_$s4main1bAA1BCvp
-	.globl	_$s4main1bAA1BCvp
-.zerofill __DATA,__common,_$s4main1bAA1BCvp,8,3
+	.private_extern	_$s4test1bAA1BCvp
+	.globl	_$s4test1bAA1BCvp
+.zerofill __DATA,__common,_$s4test1bAA1BCvp,8,3
 	.section	__TEXT,__swift5_entry,regular,no_dead_strip
 	.p2align	2, 0x0
 l_entry_point:
 	.long	_main-l_entry_point
 	.long	0
 
-	.private_extern	_$s4main1ACMm
+	.private_extern	_$s4test1ACMm
 	.section	__DATA,__data
-	.globl	_$s4main1ACMm
+	.globl	_$s4test1ACMm
 	.p2align	3, 0x0
-_$s4main1ACMm:
+_$s4test1ACMm:
 	.quad	_OBJC_METACLASS_$__TtCs12_SwiftObject
 	.quad	_OBJC_METACLASS_$__TtCs12_SwiftObject
 	.quad	__objc_empty_cache
 	.quad	0
-	.quad	__METACLASS_DATA__TtC4main1A
+	.quad	__METACLASS_DATA__TtC4test1A
 
 	.section	__TEXT,__cstring,cstring_literals
-L_.str.11._TtC4main1A:
-	.asciz	"_TtC4main1A"
+L_.str.11._TtC4test1A:
+	.asciz	"_TtC4test1A"
 
 	.section	__DATA,__objc_const
 	.p2align	3, 0x0
-__METACLASS_DATA__TtC4main1A:
+__METACLASS_DATA__TtC4test1A:
 	.long	129
 	.long	40
 	.long	40
 	.long	0
 	.quad	0
-	.quad	L_.str.11._TtC4main1A
+	.quad	L_.str.11._TtC4test1A
 	.quad	0
 	.quad	0
 	.quad	0
@@ -320,13 +322,13 @@ __METACLASS_DATA__TtC4main1A:
 	.quad	0
 
 	.p2align	3, 0x0
-__DATA__TtC4main1A:
+__DATA__TtC4test1A:
 	.long	128
 	.long	16
 	.long	16
 	.long	0
 	.quad	0
-	.quad	L_.str.11._TtC4main1A
+	.quad	L_.str.11._TtC4test1A
 	.quad	0
 	.quad	0
 	.quad	0
@@ -334,112 +336,115 @@ __DATA__TtC4main1A:
 	.quad	0
 
 	.section	__TEXT,__const
-l_.str.4.main:
-	.asciz	"main"
+l_.str.4.test:
+	.asciz	"test"
 
-	.private_extern	_$s4mainMXM
+	.private_extern	_$s4testMXM
 	.section	__TEXT,__constg_swiftt
-	.globl	_$s4mainMXM
-	.weak_definition	_$s4mainMXM
+	.globl	_$s4testMXM
+	.weak_definition	_$s4testMXM
 	.p2align	2, 0x0
-_$s4mainMXM:
+_$s4testMXM:
 	.long	0
 	.long	0
-	.long	(l_.str.4.main-_$s4mainMXM)-8
+	.long	(l_.str.4.test-_$s4testMXM)-8
 
 	.section	__TEXT,__const
 l_.str.1.A:
 	.asciz	"A"
 
-	.private_extern	_$s4main1ACMn
+	.private_extern	_$s4test1ACMn
 	.section	__TEXT,__constg_swiftt
-	.globl	_$s4main1ACMn
+	.globl	_$s4test1ACMn
 	.p2align	2, 0x0
-_$s4main1ACMn:
+_$s4test1ACMn:
 	.long	2147483728
-	.long	(_$s4mainMXM-_$s4main1ACMn)-4
-	.long	(l_.str.1.A-_$s4main1ACMn)-8
-	.long	(_$s4main1ACMa-_$s4main1ACMn)-12
-	.long	(_$s4main1ACMF-_$s4main1ACMn)-16
+	.long	(_$s4testMXM-_$s4test1ACMn)-4
+	.long	(l_.str.1.A-_$s4test1ACMn)-8
+	.long	(_$s4test1ACMa-_$s4test1ACMn)-12
+	.long	(_$s4test1ACMF-_$s4test1ACMn)-16
 	.long	0
 	.long	3
-	.long	12
-	.long	2
+	.long	13
+	.long	3
 	.long	0
 	.long	10
 	.long	10
-	.long	2
+	.long	3
 	.long	16
-	.long	(_$s4main1AC1ByyF-_$s4main1ACMn)-56
+	.long	(_$s4test1ACAByyF-_$s4test1ACMn)-56
+	.long	16
+	.long	(_$s4test1AC1ByyF-_$s4test1ACMn)-64
 	.long	1
-	.long	(_$s4main1ACACycfC-_$s4main1ACMn)-64
+	.long	(_$s4test1ACACycfC-_$s4test1ACMn)-72
 
 	.section	__DATA,__data
 	.p2align	3, 0x0
-_$s4main1ACMf:
+_$s4test1ACMf:
 	.quad	0
-	.quad	_$s4main1ACfD
+	.quad	_$s4test1ACfD
 	.quad	_$sBoWV
-	.quad	_$s4main1ACMm
+	.quad	_$s4test1ACMm
 	.quad	_OBJC_CLASS_$__TtCs12_SwiftObject
 	.quad	__objc_empty_cache
 	.quad	0
-	.quad	__DATA__TtC4main1A+2
+	.quad	__DATA__TtC4test1A+2
 	.long	2
 	.long	0
 	.long	16
 	.short	7
 	.short	0
-	.long	120
+	.long	128
 	.long	24
-	.quad	_$s4main1ACMn
+	.quad	_$s4test1ACMn
 	.quad	0
-	.quad	_$s4main1AC1ByyF
-	.quad	_$s4main1ACACycfC
+	.quad	_$s4test1ACAByyF
+	.quad	_$s4test1AC1ByyF
+	.quad	_$s4test1ACACycfC
 
-	.private_extern	"_symbolic _____ 4main1AC"
+	.private_extern	"_symbolic _____ 4test1AC"
 	.section	__TEXT,__swift5_typeref
-	.globl	"_symbolic _____ 4main1AC"
-	.weak_definition	"_symbolic _____ 4main1AC"
+	.globl	"_symbolic _____ 4test1AC"
+	.weak_definition	"_symbolic _____ 4test1AC"
 	.p2align	1, 0x0
-"_symbolic _____ 4main1AC":
+"_symbolic _____ 4test1AC":
 	.byte	1
-	.long	(_$s4main1ACMn-"_symbolic _____ 4main1AC")-1
+	.long	(_$s4test1ACMn-"_symbolic _____ 4test1AC")-1
 	.byte	0
 
 	.section	__TEXT,__swift5_fieldmd
 	.p2align	2, 0x0
-_$s4main1ACMF:
-	.long	"_symbolic _____ 4main1AC"-_$s4main1ACMF
+_$s4test1ACMF:
+	.long	"_symbolic _____ 4test1AC"-_$s4test1ACMF
 	.long	0
 	.short	1
 	.short	12
 	.long	0
 
-	.private_extern	_$s4main1BCMm
+	.private_extern	_$s4test1BCMm
 	.section	__DATA,__data
-	.globl	_$s4main1BCMm
+	.globl	_$s4test1BCMm
 	.p2align	3, 0x0
-_$s4main1BCMm:
+_$s4test1BCMm:
 	.quad	_OBJC_METACLASS_$__TtCs12_SwiftObject
-	.quad	_$s4main1ACMm
+	.quad	_$s4test1ACMm
 	.quad	__objc_empty_cache
 	.quad	0
-	.quad	__METACLASS_DATA__TtC4main1B
+	.quad	__METACLASS_DATA__TtC4test1B
 
 	.section	__TEXT,__cstring,cstring_literals
-L_.str.11._TtC4main1B:
-	.asciz	"_TtC4main1B"
+L_.str.11._TtC4test1B:
+	.asciz	"_TtC4test1B"
 
 	.section	__DATA,__objc_const
 	.p2align	3, 0x0
-__METACLASS_DATA__TtC4main1B:
+__METACLASS_DATA__TtC4test1B:
 	.long	129
 	.long	40
 	.long	40
 	.long	0
 	.quad	0
-	.quad	L_.str.11._TtC4main1B
+	.quad	L_.str.11._TtC4test1B
 	.quad	0
 	.quad	0
 	.quad	0
@@ -447,13 +452,13 @@ __METACLASS_DATA__TtC4main1B:
 	.quad	0
 
 	.p2align	3, 0x0
-__DATA__TtC4main1B:
+__DATA__TtC4test1B:
 	.long	128
 	.long	16
 	.long	16
 	.long	0
 	.quad	0
-	.quad	L_.str.11._TtC4main1B
+	.quad	L_.str.11._TtC4test1B
 	.quad	0
 	.quad	0
 	.quad	0
@@ -464,80 +469,81 @@ __DATA__TtC4main1B:
 l_.str.1.B:
 	.asciz	"B"
 
-	.private_extern	_$s4main1BCMn
+	.private_extern	_$s4test1BCMn
 	.section	__TEXT,__constg_swiftt
-	.globl	_$s4main1BCMn
+	.globl	_$s4test1BCMn
 	.p2align	2, 0x0
-_$s4main1BCMn:
+_$s4test1BCMn:
 	.long	1073741904
-	.long	(_$s4mainMXM-_$s4main1BCMn)-4
-	.long	(l_.str.1.B-_$s4main1BCMn)-8
-	.long	(_$s4main1BCMa-_$s4main1BCMn)-12
-	.long	(_$s4main1BCMF-_$s4main1BCMn)-16
-	.long	("_symbolic _____ 4main1AC"-_$s4main1BCMn)-20
+	.long	(_$s4testMXM-_$s4test1BCMn)-4
+	.long	(l_.str.1.B-_$s4test1BCMn)-8
+	.long	(_$s4test1BCMa-_$s4test1BCMn)-12
+	.long	(_$s4test1BCMF-_$s4test1BCMn)-16
+	.long	("_symbolic _____ 4test1AC"-_$s4test1BCMn)-20
 	.long	3
-	.long	12
+	.long	13
 	.long	0
 	.long	0
-	.long	12
+	.long	13
 	.long	2
-	.long	(_$s4main1ACMn-_$s4main1BCMn)-48
-	.long	_$s4main1ACMn-_$s4main1BCMn
-	.long	(_$s4main1BCAByyF-_$s4main1BCMn)-56
-	.long	(_$s4main1ACMn-_$s4main1BCMn)-60
-	.long	(_$s4main1ACMn-_$s4main1BCMn)-4
-	.long	(_$s4main1BCACycfC-_$s4main1BCMn)-68
+	.long	(_$s4test1ACMn-_$s4test1BCMn)-48
+	.long	(_$s4test1ACMn-_$s4test1BCMn)+8
+	.long	(_$s4test1BCAByyF-_$s4test1BCMn)-56
+	.long	(_$s4test1ACMn-_$s4test1BCMn)-60
+	.long	(_$s4test1ACMn-_$s4test1BCMn)+4
+	.long	(_$s4test1BCACycfC-_$s4test1BCMn)-68
 
 	.section	__DATA,__data
 	.p2align	3, 0x0
-_$s4main1BCMf:
+_$s4test1BCMf:
 	.quad	0
-	.quad	_$s4main1BCfD
+	.quad	_$s4test1BCfD
 	.quad	_$sBoWV
-	.quad	_$s4main1BCMm
-	.quad	_$s4main1ACMf+24
+	.quad	_$s4test1BCMm
+	.quad	_$s4test1ACMf+24
 	.quad	__objc_empty_cache
 	.quad	0
-	.quad	__DATA__TtC4main1B+2
+	.quad	__DATA__TtC4test1B+2
 	.long	2
 	.long	0
 	.long	16
 	.short	7
 	.short	0
-	.long	120
+	.long	128
 	.long	24
-	.quad	_$s4main1BCMn
+	.quad	_$s4test1BCMn
 	.quad	0
-	.quad	_$s4main1BCAByyF
-	.quad	_$s4main1BCACycfC
+	.quad	_$s4test1ACAByyF
+	.quad	_$s4test1BCAByyF
+	.quad	_$s4test1BCACycfC
 
-	.private_extern	"_symbolic _____ 4main1BC"
+	.private_extern	"_symbolic _____ 4test1BC"
 	.section	__TEXT,__swift5_typeref
-	.globl	"_symbolic _____ 4main1BC"
-	.weak_definition	"_symbolic _____ 4main1BC"
+	.globl	"_symbolic _____ 4test1BC"
+	.weak_definition	"_symbolic _____ 4test1BC"
 	.p2align	1, 0x0
-"_symbolic _____ 4main1BC":
+"_symbolic _____ 4test1BC":
 	.byte	1
-	.long	(_$s4main1BCMn-"_symbolic _____ 4main1BC")-1
+	.long	(_$s4test1BCMn-"_symbolic _____ 4test1BC")-1
 	.byte	0
 
 	.section	__TEXT,__swift5_fieldmd
 	.p2align	2, 0x0
-_$s4main1BCMF:
-	.long	"_symbolic _____ 4main1BC"-_$s4main1BCMF
-	.long	("_symbolic _____ 4main1AC"-_$s4main1BCMF)-4
+_$s4test1BCMF:
+	.long	"_symbolic _____ 4test1BC"-_$s4test1BCMF
+	.long	("_symbolic _____ 4test1AC"-_$s4test1BCMF)-4
 	.short	1
 	.short	12
 	.long	0
 
 	.section	__TEXT,__swift5_types
 	.p2align	2, 0x0
-l_$s4main1ACHn:
-	.long	_$s4main1ACMn-l_$s4main1ACHn
+l_$s4test1ACHn:
+	.long	_$s4test1ACMn-l_$s4test1ACHn
 
 	.p2align	2, 0x0
-l_$s4main1BCHn:
-	.long	_$s4main1BCMn-l_$s4main1BCHn
+l_$s4test1BCHn:
+	.long	_$s4test1BCMn-l_$s4test1BCHn
 
 	.private_extern	___swift_reflection_version
 	.section	__TEXT,__const
@@ -549,22 +555,22 @@ ___swift_reflection_version:
 
 	.section	__DATA,__objc_classlist,regular,no_dead_strip
 	.p2align	3, 0x0
-_objc_classes_$s4main1ACN:
-	.quad	_$s4main1ACN
+_objc_classes_$s4test1ACN:
+	.quad	_$s4test1ACN
 
 	.p2align	3, 0x0
-_objc_classes_$s4main1BCN:
-	.quad	_$s4main1BCN
+_objc_classes_$s4test1BCN:
+	.quad	_$s4test1BCN
 
 	.no_dead_strip	_main
 	.no_dead_strip	l_entry_point
-	.no_dead_strip	_$s4main1ACMF
-	.no_dead_strip	_$s4main1BCMF
-	.no_dead_strip	l_$s4main1ACHn
-	.no_dead_strip	l_$s4main1BCHn
+	.no_dead_strip	_$s4test1ACMF
+	.no_dead_strip	_$s4test1BCMF
+	.no_dead_strip	l_$s4test1ACHn
+	.no_dead_strip	l_$s4test1BCHn
 	.no_dead_strip	___swift_reflection_version
-	.no_dead_strip	_objc_classes_$s4main1ACN
-	.no_dead_strip	_objc_classes_$s4main1BCN
+	.no_dead_strip	_objc_classes_$s4test1ACN
+	.no_dead_strip	_objc_classes_$s4test1BCN
 	.linker_option "-lswiftSwiftOnoneSupport"
 	.linker_option "-lswiftCore"
 	.linker_option "-lswift_Concurrency"
@@ -575,20 +581,24 @@ L_OBJC_IMAGE_INFO:
 	.long	0
 	.long	84477760
 
-	.globl	_$s4main1AC1ByyFTq
-	.private_extern	_$s4main1AC1ByyFTq
-	.alt_entry	_$s4main1AC1ByyFTq
-.set _$s4main1AC1ByyFTq, _$s4main1ACMn+52
-	.globl	_$s4main1ACACycfCTq
-	.private_extern	_$s4main1ACACycfCTq
-	.alt_entry	_$s4main1ACACycfCTq
-.set _$s4main1ACACycfCTq, _$s4main1ACMn+60
-	.globl	_$s4main1ACN
-	.private_extern	_$s4main1ACN
-	.alt_entry	_$s4main1ACN
-.set _$s4main1ACN, _$s4main1ACMf+24
-	.globl	_$s4main1BCN
-	.private_extern	_$s4main1BCN
-	.alt_entry	_$s4main1BCN
-.set _$s4main1BCN, _$s4main1BCMf+24
+	.globl	_$s4test1ACAByyFTq
+	.private_extern	_$s4test1ACAByyFTq
+	.alt_entry	_$s4test1ACAByyFTq
+.set _$s4test1ACAByyFTq, _$s4test1ACMn+52
+	.globl	_$s4test1AC1ByyFTq
+	.private_extern	_$s4test1AC1ByyFTq
+	.alt_entry	_$s4test1AC1ByyFTq
+.set _$s4test1AC1ByyFTq, _$s4test1ACMn+60
+	.globl	_$s4test1ACACycfCTq
+	.private_extern	_$s4test1ACACycfCTq
+	.alt_entry	_$s4test1ACACycfCTq
+.set _$s4test1ACACycfCTq, _$s4test1ACMn+68
+	.globl	_$s4test1ACN
+	.private_extern	_$s4test1ACN
+	.alt_entry	_$s4test1ACN
+.set _$s4test1ACN, _$s4test1ACMf+24
+	.globl	_$s4test1BCN
+	.private_extern	_$s4test1BCN
+	.alt_entry	_$s4test1BCN
+.set _$s4test1BCN, _$s4test1BCMf+24
 .subsections_via_symbols

@@ -1,0 +1,111 @@
+
+$ swiftc -g vtables.swift && lldb vtables -s <(echo -e "br set -n main -s vtables\nrun")
+(lldb) target create "vtables"
+Current executable set to '/Users/alex/docs/Reports/method_dispatch_in_swift_report_code/vtables' (x86_64).
+(lldb) command source -s 0 '/dev/fd/11'
+Executing commands in '/dev/fd/11'.
+(lldb) br set -n main -s vtables
+Breakpoint 1: where = vtables`main + 7 at vtables.swift:17:11, address = 0x00000001000038d7
+(lldb) run
+Process 2306 stopped
+* thread #1, queue = 'com.apple.main-thread', stop reason = breakpoint 1.1
+    frame #0: 0x00000001000038d7 vtables`main at vtables.swift:17:11
+   14          }
+   15      }
+   16
+-> 17      let cat = Cat()
+   18      cat.sleep()
+Target 0: (vtables) stopped.
+Process 2306 launched: '/Users/alex/docs/Reports/Доклад - Диспетчеризация методов в Swift  в Garage-It, Тбилиси, 18 октября 2023/method_dispatch_in_swift_report_code/vtables' (x86_64)
+
+
+
+(lldb) image lookup -rs type\ descriptor vtables
+2 symbols match the regular expression 'type descriptor' in /Users/alex/docs/Reports/method_dispatch_in_swift_report_code/vtables:
+        Address: vtables[0x0000000100003eb4] (vtables.__TEXT.__constg_swiftt + 12)
+        Summary: vtables`nominal type descriptor for vtables.Animal
+        Address: vtables[0x0000000100003f00] (vtables.__TEXT.__constg_swiftt + 88)
+        Summary: vtables`nominal type descriptor for vtables.Cat
+
+(lldb) x/2wx `0x0000000100003f00 + 44`
+0x100003f2c: 0x00000002 0xffffff84
+
+(lldb) x/6wd `0x0000000100003f00 + 44`
+0x100003f2c: 2
+0x100003f30: -124
+0x100003f34: -68
+0x100003f38: -824
+0x100003f3c: -136
+0x100003f40: -72
+
+(lldb) image lookup -a `0x100003f38 + -824`
+      Address: vtables[0x0000000100003c00] (vtables.__TEXT.__text + 816)
+      Summary: vtables`vtables.Cat.go() -> () at vtables.swift:12
+
+(lldb) platform shell nm vtables | grep go | xcrun swift-demangle
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/nm: error: |: No such file or directory
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/nm: error: grep: No such file or directory
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/nm: error: go: No such file or directory
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/nm: error: |: No such file or directory
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/nm: error: xcrun: No such file or directory
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/nm: error: swift-demangle: No such file or directory
+
+vtables:
+0000000100003c00 t _$s7vtables3CatC2goyyF
+0000000100003cd0 t _$s7vtables3CatCACycfC
+0000000100003d00 t _$s7vtables3CatCACycfc
+0000000100003f64 s _$s7vtables3CatCMF
+0000000100003910 t _$s7vtables3CatCMa
+00000001000081f0 d _$s7vtables3CatCMf
+00000001000081c8 d _$s7vtables3CatCMm
+0000000100003f00 s _$s7vtables3CatCMn
+0000000100008208 d _$s7vtables3CatCN
+0000000100003d70 t _$s7vtables3CatCfD
+0000000100003d50 t _$s7vtables3CatCfd
+0000000100008270 s _$s7vtables3catAA3CatCvp
+0000000100003a80 t _$s7vtables6AnimalC2goyyF
+0000000100003ef0 s _$s7vtables6AnimalC2goyyFTq
+0000000100003930 t _$s7vtables6AnimalC5sleepyyF
+0000000100003ee8 s _$s7vtables6AnimalC5sleepyyFTq
+0000000100003bb0 t _$s7vtables6AnimalCACycfC
+0000000100003ef8 s _$s7vtables6AnimalCACycfCTq
+0000000100003be0 t _$s7vtables6AnimalCACycfc
+0000000100003f54 s _$s7vtables6AnimalCMF
+0000000100003db0 t _$s7vtables6AnimalCMa
+0000000100008148 d _$s7vtables6AnimalCMf
+0000000100008120 d _$s7vtables6AnimalCMm
+0000000100003eb4 s _$s7vtables6AnimalCMn
+0000000100008160 d _$s7vtables6AnimalCN
+0000000100003b70 t _$s7vtables6AnimalCfD
+0000000100003b50 t _$s7vtables6AnimalCfd
+0000000100003ea8 s _$s7vtablesMXM
+                 U _$sBoWV
+                 U _$sSS21_builtinStringLiteral17utf8CodeUnitCount7isASCIISSBp_BwBi1_tcfC
+                 U _$sSSN
+0000000100003dd0 t _$sSa12_endMutationyyF
+                 U _$sSaMa
+                 U _$ss27_allocateUninitializedArrayySayxG_BptBwlF
+0000000100003a00 t _$ss27_finalizeUninitializedArrayySayxGABnlF
+                 U _$ss5print_9separator10terminatoryypd_S2StF
+0000000100003a40 t _$ss5print_9separator10terminatoryypd_S2StFfA0_
+0000000100003a60 t _$ss5print_9separator10terminatoryypd_S2StFfA1_
+                 U _$sypN
+                 U _OBJC_CLASS_$__TtCs12_SwiftObject
+                 U _OBJC_METACLASS_$__TtCs12_SwiftObject
+00000001000080d8 s __DATA__TtC7vtables3Cat
+0000000100008048 s __DATA__TtC7vtables6Animal
+0000000100008090 s __METACLASS_DATA__TtC7vtables3Cat
+0000000100008000 s __METACLASS_DATA__TtC7vtables6Animal
+0000000100003ea4 s ___swift_reflection_version
+0000000100000000 T __mh_execute_header
+                 U __objc_empty_cache
+00000001000038d0 T _main
+                 U _objc_opt_self
+                 U _swift_allocObject
+                 U _swift_bridgeObjectRelease
+                 U _swift_deallocClassInstance
+                 U _swift_release
+                 U _swift_retain
+0000000100003f4e s _symbolic _____ 7vtables3CatC
+0000000100003f48 s _symbolic _____ 7vtables6AnimalC
+error: command returned with status 1
