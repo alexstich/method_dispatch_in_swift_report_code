@@ -14,12 +14,33 @@ class DynamicClass {
   init()
 }
 
+@_hasStorage @_hasInitialValue let obj: DynamicClass { get }
+
+// obj
+sil_global hidden [let] @dynamic.obj : dynamic.DynamicClass : $DynamicClass
+
 // main
 sil @main : $@convention(c) (Int32, UnsafeMutablePointer<Optional<UnsafeMutablePointer<Int8>>>) -> Int32 {
 bb0(%0 : $Int32, %1 : $UnsafeMutablePointer<Optional<UnsafeMutablePointer<Int8>>>):
-  %2 = integer_literal $Builtin.Int32, 0          // user: %3
-  %3 = struct $Int32 (%2 : $Builtin.Int32)        // user: %4
-  return %3 : $Int32                              // id: %4
+  alloc_global @dynamic.obj : dynamic.DynamicClass // id: %2
+  %3 = global_addr @dynamic.obj : dynamic.DynamicClass : $*DynamicClass // users: %14, %11, %8, %7
+  %4 = metatype $@thick DynamicClass.Type         // user: %6
+  // function_ref DynamicClass.__allocating_init()
+  %5 = function_ref @dynamic.DynamicClass.__allocating_init() -> dynamic.DynamicClass : $@convention(method) (@thick DynamicClass.Type) -> @owned DynamicClass // user: %6
+  %6 = apply %5(%4) : $@convention(method) (@thick DynamicClass.Type) -> @owned DynamicClass // user: %7
+  store %6 to %3 : $*DynamicClass                 // id: %7
+  %8 = load %3 : $*DynamicClass                   // users: %9, %10
+  %9 = class_method %8 : $DynamicClass, #DynamicClass.objcMethod : (DynamicClass) -> () -> (), $@convention(method) (@guaranteed DynamicClass) -> () // user: %10
+  %10 = apply %9(%8) : $@convention(method) (@guaranteed DynamicClass) -> ()
+  %11 = load %3 : $*DynamicClass                  // users: %12, %13
+  %12 = objc_method %11 : $DynamicClass, #DynamicClass.objectDynamicMethod!foreign : (DynamicClass) -> () -> (), $@convention(objc_method) (DynamicClass) -> () // user: %13
+  %13 = apply %12(%11) : $@convention(objc_method) (DynamicClass) -> ()
+  %14 = load %3 : $*DynamicClass                  // users: %15, %16
+  %15 = class_method %14 : $DynamicClass, #DynamicClass.dynamicMethod : (DynamicClass) -> () -> (), $@convention(method) (@guaranteed DynamicClass) -> () // user: %16
+  %16 = apply %15(%14) : $@convention(method) (@guaranteed DynamicClass) -> ()
+  %17 = integer_literal $Builtin.Int32, 0         // user: %18
+  %18 = struct $Int32 (%17 : $Builtin.Int32)      // user: %19
+  return %18 : $Int32                             // id: %19
 } // end sil function 'main'
 
 // DynamicClass.objcMethod()

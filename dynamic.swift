@@ -5,3 +5,8 @@ class DynamicClass {
     @objc dynamic func objectDynamicMethod() {}
     dynamic func dynamicMethod() {}
 }
+
+let obj = DynamicClass()
+obj.objcMethod()
+obj.objectDynamicMethod()
+obj.dynamicMethod()
