@@ -3,7 +3,7 @@ class Animal {
     func voice() {
         print("rrrr")
     }
-    final func sleep() {
+    func sleep() {
         print("ssss")
     }
 }

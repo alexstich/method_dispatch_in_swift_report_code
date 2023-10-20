@@ -1,12 +1,12 @@
 class A {
-    func execute(param: Int = 0) {
+    func execute(param: Int = 123) {
         print("A: \(param)")
     }
 
 }
 
 class B: A {
-    override func execute(param: Int = 1) {
+    override func execute(param: Int = 456) {
         print("B: \(param)")
     }
 }

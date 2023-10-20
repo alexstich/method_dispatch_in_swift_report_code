@@ -3,14 +3,14 @@ class Animal {
         print("Animal is sleeping")
     }
     
-    func go() {
-        print("Animal is going")
+    func voice() {
+        print("Animal makes a sound")
     }
 }
 
 class Cat: Animal {
-    override func go() {
-        print("Cat is going")
+    override func voice() {
+        print("Cat is meowing")
     }
 }
 

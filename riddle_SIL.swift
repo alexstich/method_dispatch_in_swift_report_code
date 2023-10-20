@@ -5,13 +5,13 @@ import Swift
 import SwiftShims
 
 class A {
-  func execute(param: Int = 0)
+  func execute(param: Int = 123)
   @objc deinit
   init()
 }
 
 @_inheritsConvenienceInitializers class B : A {
-  override func execute(param: Int = 1)
+  override func execute(param: Int = 456)
   override init()
   @objc deinit
 }
@@ -46,7 +46,7 @@ bb0(%0 : $Int32, %1 : $UnsafeMutablePointer<Optional<UnsafeMutablePointer<Int8>>
 // default argument 0 of A.execute(param:)
 sil hidden @default argument 0 of riddle.A.execute(param: Swift.Int) -> () : $@convention(thin) () -> Int {
 bb0:
-  %0 = integer_literal $Builtin.Int64, 0          // user: %1
+  %0 = integer_literal $Builtin.Int64, 123        // user: %1
   %1 = struct $Int (%0 : $Builtin.Int64)          // user: %2
   return %1 : $Int                                // id: %2
 } // end sil function 'default argument 0 of riddle.A.execute(param: Swift.Int) -> ()'
@@ -255,7 +255,7 @@ bb0(%0 : $A):
 // default argument 0 of B.execute(param:)
 sil hidden @default argument 0 of riddle.B.execute(param: Swift.Int) -> () : $@convention(thin) () -> Int {
 bb0:
-  %0 = integer_literal $Builtin.Int64, 1          // user: %1
+  %0 = integer_literal $Builtin.Int64, 456        // user: %1
   %1 = struct $Int (%0 : $Builtin.Int64)          // user: %2
   return %1 : $Int                                // id: %2
 } // end sil function 'default argument 0 of riddle.B.execute(param: Swift.Int) -> ()'

@@ -3,6 +3,7 @@
 // swiftc -emit-sil -Onone test.swift | xcrun swift-demangle > test.silgen 
 // clang -S test.m
 // xcrun swift-demangle s4main1bAA1BCvp
+// xcrun swift-demangle 23witness_tables_gen_code3CatV8makeMrrryyF
 
 
 // To get method pointer
